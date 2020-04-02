@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <link rel="shortcut icon" href="/img/focus.png"/>
+    <link href="https://fonts.googleapis.com/css?family=Oxanium&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kanit&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Michroma&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Londrina+Shadow&display=swap" rel="stylesheet">
+
+
+    <title>Anasayfa</title>
+</head>
+
+<body>
+    <div class="container-fluid bg-purple high-size">
+        <div class="container-fluid bg-white h-100 width-custom">
+            <div class="row height-100">
+                <div class="col-md-5 bg-kaya101 h-75 w-100 d-inline-block mx-auto rounded-custom ">
+                    <div class="row mx-auto">
+                        <div class="col-12 purple-area"> <img src="/img/focus.png" alt="logo" class="logo-size"> firat kaya
+                        </div>
+                        <div class="col-12 purple-area-text mobile-height">
+                            <div class="content">
+                                <div class="text"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7 bg-white h-75 w-100 d-inline-block ">
+                    <nav class="navbar navbar-expand-lg navbar-light ">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="nav mx-auto mt-4">
+                                <li class="nav-item">
+                                    <a class="nav-link" id="actives-nav-item" th:href="@{/index}">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" th:href="@{/contact}">Contact</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" th:href="@{/products}">Products</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" th:href="@{/team}">Team</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" th:href="@{/blog}">Blog</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link bg-kaya-purple" href="#">Projects</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="col-md-12">
+                        <h2 class="white-area-text">Fırat Kaya</h2>
+                        <p class="white-area-text" style="font-size: 15px;">Bir fikrin mi var ? İnsanların işlerini kolaylaştırıcak bir projeye mi sahipsin? Bizimle iletişime geç ve gözlerin açılsın !
+                        </p>
+                    </div>
+                    <div class="col-md-12">
+                        <p class="white-area-text-sub">Her gün yüzlerce yenilikçi fikirlere destek oluyor ve geliştiriyoruz. Bu süreçte yüzlerce fikir sahipleriyle bir araya gelirek, projelerini açık kaynak kod dünyasına sunuyoruz. Aramızda katıl ve kendini geliştirme fırsatı yakala.
+                        </p>
+                    </div>
+                    <div class="col-md-6 border h-25 w-100 bg-kaya101 join-to-us shadow-lg rounded-left-right">
+                        <div class="row h-100 align-items-center join-buttons">
+                            <div class="col-md-6 text-center"><a class="border p-2 rounded-pill" href="#">Ekibe Katıl</a></div>
+                            <div class="col-md-6 text-center"><a class="border p-2 rounded-pill" href="#">Fikrini Yolla</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 text-center">
+                    <p class="reality-senteces">Everything you can imagine is real.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="height-250 border-casual ">
+        <div class="row bg-dark p-4">
+            <div class="col-md-3">
+                <div class="row ">
+                    <div class="col-md-12 p-2">
+                        <h3><a href="#">References</a></h3>
+                    </div>
+                    <div class="col-md-12 p-2">
+                        <a href="#"><img class="logo-size3" src="/img/vegetable.png" alt="references"> Vegatabacco Caffe</a>
+                    </div>
+                    <div class="col-md-12 p-2">
+                        <a href="#"><img class="logo-size3" src="/img/backpack.png" alt="references"> School Manangement Systems</a>
+                    </div>
+                    <div class="col-md-12 p-2">
+                        <a href="#"><img class="logo-size3" src="/img/coffee.png" alt="references"> Sonakaa Pub</a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="row">
+                    <div class="col-md-12 p-2">
+                        <h3><a href="#">About Us</a></h3>
+                    </div>
+                    <div class="col-md-12 p-2"><a href="#">Team</a></div>
+                    <div class="col-md-12 p-2"><a href="#">Jobs</a></div>
+                    <div class="col-md-12 p-2"><a href="#">Why F.K</a></div>
+                    <div class="col-md-12 p-2"><a href="#">Technologies</a></div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="row">
+                    <div class="col-md-12 p-2">
+                        <h3><a href="#">Products</a></h3>
+                    </div>
+                    <div class="col-md-12 p-2">
+                        <a href="#">How to Buy</a></div>
+                    <div class="col-md-12 p-2">
+                        <a href="#">Selling</a></div>
+                    <div class="col-md-12 p-2"><a href="#">Information</a></div>
+                    <div class="col-md-12 p-2"><a href="#">Help</a></div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="row">
+                    <div class="col-md-12 p-2">
+                        <h3>Where we are</h3>
+                    </div>
+                    <div class="col-md-12 p-2">Map</div>
+                </div>
+            </div>
+            <div class="col-md-12 mt-4">
+                <hr class="bg-white">
+                <p class="text-center">
+                    <a href="https://kayafirat.com"> Fırat Kaya All Right Reserved &copy; 2020 www.kayafirat.com </a></p>
+                <hr class="bg-white">
+
+            </div>
+        </div>
+    </div>
+    <script src="/js/jquery-3.4.1.min.js "></script>
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/error.js"></script>
+</body>
+
+</html>

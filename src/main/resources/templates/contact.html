@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <link rel="shortcut icon" href="/img/focus.png"/>
+    <link href="https://fonts.googleapis.com/css?family=Oxanium&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kanit&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Michroma&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Londrina+Shadow&display=swap" rel="stylesheet">
+
+
+    <title>Contact</title>
+</head>
+
+<body>
+    <div class="container-fluid bg-purple high-size">
+        <div class="container-fluid bg-white h-100 width-custom">
+            <div class="row h-100">
+                <div class="col-md-5 bg-kaya101 h-75 w-100 d-inline-block mx-auto rounded-custom ">
+                    <div class="row mx-auto">
+                        <div class="col-12 purple-area"> <img src="img/focus.png" alt="logo" class="logo-size"> firat kaya/Contact
+                        </div>
+                        <div class="col-12 text-center mt-4">
+                            <img class="letter-size" src="img/form.png" alt="pictures">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7 bg-white h-75 w-100 d-inline-block ">
+                    <nav class="navbar navbar-expand-lg navbar-light ">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarbuton" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarbuton">
+                           <ul class="nav mx-auto mt-4">
+                                <li class="nav-item">
+                                    <a class="nav-link" id="actives-nav-item" th:href="@{/index}">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" th:href="@{/contact}">Contact</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" th:href="@{/products}">Products</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" th:href="@{/team}">Team</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" th:href="@{/blog}">Blog</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link bg-kaya-purple" href="#">Projects</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="col-md-12">
+                        <h2 class="white-area-text">Düşencelerini Bizle Paylaş</h2>
+                        <p class="white-area-text-sub" style="font-size: 12px;">
+                            Ekip olarak sizlerden gelen her türlü fikir ve önerilerinize açığız. Aşağıdaki metni doldur ve seninle iletişime geçelim. Eğer fazla sabırsız biri ise eğer bizimle direk kaya@kayafirat.com adresinden iletişime geçebilirsin.
+                        </p>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="emailAdress">Email adresin</label>
+                                    <input type="email" class="form-control" id="emailAdress" placeholder="name@example.com">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="konu-baslik">İletişim Nedenini Belirt</label>
+                                    <select class="form-control" id="konu-baslik">
+                                      <option>Satın Alım</option>
+                                      <option>Destek</option>
+                                      <option>Öneri/Şikayet</option>
+                                      <option>Diğer</option>
+                                      <option>Belirtmek istemiyorum.</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="message">Mesajını Yaz</label>
+                                    <textarea class="form-control" id="message" rows="4"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="col-md-12 h-100 w-100">
+                        <div class="row mt-4">
+                            <div class="col-md-12 text-right bg-send-message"><a class="p-3" href="#">Send Message</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 text-center">
+                    <p class="reality-senteces">There is no darkness but ignorance.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="height-250 border-casual ">
+        <div class="row bg-dark p-4">
+            <div class="col-md-3">
+               <div class="row ">
+                    <div class="col-md-12 p-2">
+                        <h3><a href="#">References</a></h3>
+                    </div>
+                    <div class="col-md-12 p-2">
+                        <a href="#"><img class="logo-size3" src="/img/vegetable.png" alt="references"> Vegatabacco Caffe</a>
+                    </div>
+                    <div class="col-md-12 p-2">
+                        <a href="#"><img class="logo-size3" src="/img/backpack.png" alt="references"> School Manangement Systems</a>
+                    </div>
+                    <div class="col-md-12 p-2">
+                        <a href="#"><img class="logo-size3" src="/img/coffee.png" alt="references"> Sonakaa Pub</a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="row">
+                    <div class="col-md-12 p-2">
+                        <h3><a href="#">About Us</a></h3>
+                    </div>
+                    <div class="col-md-12 p-2"><a href="#">Team</a></div>
+                    <div class="col-md-12 p-2"><a href="#">Jobs</a></div>
+                    <div class="col-md-12 p-2"><a href="#">Why F.K</a></div>
+                    <div class="col-md-12 p-2"><a href="#">Technologies</a></div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="row">
+                    <div class="col-md-12 p-2">
+                        <h3><a href="#">Products</a></h3>
+                    </div>
+                    <div class="col-md-12 p-2">
+                        <a href="#">How to Buy</a></div>
+                    <div class="col-md-12 p-2">
+                        <a href="#">Selling</a></div>
+                    <div class="col-md-12 p-2"><a href="#">Information</a></div>
+                    <div class="col-md-12 p-2"><a href="#">Help</a></div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="row">
+                    <div class="col-md-12 p-2">
+                        <h3>Where we are</h3>
+                    </div>
+                    <div class="col-md-12 p-2">Map</div>
+                </div>
+            </div>
+            <div class="col-md-12 mt-4">
+                <hr class="bg-white">
+                <p class="text-center">
+                    <a href="https://kayafirat.com"> Fırat Kaya All Right Reserved &copy; 2020 www.kayafirat.com </a></p>
+                <hr class="bg-white">
+            </div>
+        </div>
+    </div>
+    <script src="/js/jquery-3.4.1.min.js "></script>
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+</body>
+
+</html>

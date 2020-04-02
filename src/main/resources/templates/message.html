@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/admin-custom.css">
+    <title>Panel - Message</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+        <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Kayatech.me</a>
+        <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+        <ul class="navbar-nav px-3">
+            <li class="nav-item text-nowrap">
+                <a class="nav-link" href="#">Sign out</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container-fluid ">
+        <div class="row">
+            <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/admin/main}">
+                                <span data-feather="home"></span> Ana Ekran 
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " th:href="@{/admin/product}">
+                                <span data-feather="file"></span> Ürünler
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " th:href="@{/admin/product-settings}">
+                                <span data-feather="shopping-cart"></span> Ürün Ayarları
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link active" th:href="@{/admin/message}">
+                                <span data-feather="message-square"></span> Mesajlar <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/admin/comment}">
+                                <span data-feather="shopping-cart"></span> Yorumlar
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/admin/statics}">
+                                <span data-feather="bar-chart-2"></span> İstatistikler
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="layers"></span> Üye Ayarları
+                            </a>
+                        </li>
+                    </ul>
+
+                    <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                        <span>Geçmiş</span>
+                        <a class="d-flex align-items-center text-muted" href="#" aria-label="Add a new report">
+                            <span data-feather="plus-circle"></span>
+                        </a>
+                    </h6>
+                    <ul class="nav flex-column mb-2">
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/admin/error-message}">
+                                <span data-feather="file-text"></span> Hata Mesajları
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/admin/delete-message}">
+                                <span data-feather="file-text"></span> Silinen Mesajlar
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/admin/settings}">
+                                <span data-feather="settings"></span> Ayarlar
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/admin/logout}">
+                                <span data-feather="log-out"></span> Çıkış  
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+
+                    <h1 class="h2">Mesajlar</h1>
+                    <div class="btn-toolbar mb-2 mb-md-0">
+                        <div class="btn-group mr-2">
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+                        </div>
+                        <button type="button" class="btn  btn-outline-dark" data-toggle="modal" data-target="#message-automatic">
+                            Otomatik Mesajı Ayarla
+                        </button>
+                    </div>
+                </div>
+                <p>Burada üyelerin satın alım bildirilerini görebilirsin. Tek yapman gerek mesajların içerigine tıklamak, Sisteme otomatik olarak kayıt ettirdigin mail protokol bilgilerine göre senin mail adresin aracılıgıyla mail attırılıcaktır. Aynı zaman
+                    da seninle iletişme geçip mesaj atan üyeler olur ise eğer otomatik bir mesaj içerigi oluşturabilirsin. Böylelikle kullanıcıyla olan uyumunu artırmış olucaksın.</p>
+
+
+                <div class="table-responsive">
+                    <table class="table table-striped table-sm">
+                        <thead>
+                            <tr>
+
+                                <th>#</th>
+                                <th>ID</th>
+                                <th>Product Code</th>
+                                <th>Product Tag</th>
+                                <th>From</th>
+                                <th>TO</th>
+                                <th>Show</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr th:each="message : ${messages}">
+                                <td>
+                                    <input type="checkbox" name="checkbox" class="input-group-lg">
+                                </td>
+                                <td th:text="${message.id}"></td>
+                                <td th:text="${message.productCode}"></td>
+                                <td th:text="${message.productTag}"></td>
+                                <td th:text="${message.messageFROM}"></td>
+                                <td th:text="${message.messageTO}"></td>
+                                <td>
+                                    <a th:href="@{/admin/message-show(messageId=${message.id})}"><button class="btn btn-sm btn-success button-text">Show</button></a>
+                                </td>
+                                <td>
+                                    <a th:href="@{/admin/message-delete(messageId=${message.id})}"><button class="btn btn-sm btn-danger button-text" >Delete</button></a>
+                                </td>
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Next</a>
+                        </li>
+                    </ul>
+                </nav>
+            </main>
+
+            <!-- Modal Message -->
+            <div class="modal fade" id="message-automatic" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Otomatik Mesaj Ayarları</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="emailadress">Seçilen Servisten  otomatik cevabı aşagıda versin !</label>
+                                    <select class="form-control" id="emailadress">
+                                        <option>Forms</option>
+                                        <option>Buttons</option>
+                                        <option>Elements</option>
+                                        <option>Errors</option>
+                                        <option>Test</option>
+                                      </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="yourmessage">Mesajınız</label>
+                                    <textarea class="form-control" id="yourmessage" rows="6"></textarea>
+                                </div>
+                            </form>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger">Temizle</button>
+                            <button type="button" class="btn btn-primary">Degişiklikleri Kaydet</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+           
+        </div>
+	</div>
+
+        <script src="/js/jquery-3.4.1.min.js "></script>
+        <script src="/js/bootstrap.js "></script>
+        <script src="/js/bootstrap.min.js "></script>
+        <script src="/js/feather.min.js "></script>
+        <script src="/js/Chart.min.js"></script>
+        <script src="/js/dashboard.js"></script>
+</body>
+
+</html>

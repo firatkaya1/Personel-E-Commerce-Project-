@@ -1,0 +1,376 @@
+body {
+    background-image: linear-gradient( 135deg, #FFA8A8 10%, #FCFF00 100%);
+    background-repeat: repeat-y;
+}
+
+.width-custom {
+    width: 95%;
+}
+
+.purple-area {
+    font-family: 'Kanit', sans-serif;
+    color: white;
+    margin-top: 15%;
+    margin-left: 5%;
+    font-size: 25px;
+}
+
+.team-area {
+    font-family: 'Kanit', sans-serif;
+    color: purple;
+    margin-top: 15%;
+    margin-left: 5%;
+    font-size: 25px;
+}
+
+.purple-area-text {
+    font-family: 'Michroma', sans-serif;
+    color: white;
+    margin-top: 15%;
+    margin-left: 5%;
+    font-size: 25px;
+}
+
+.white-area-text {
+    font-family: 'Michroma', sans-serif;
+    color: black;
+    padding: 15px;
+    margin-top: 2%;
+    font-size: 20px;
+}
+
+.white-area-text-sub {
+    color: #C0C0C0;
+    padding: 15px;
+}
+
+.logo-size {
+    width: 45px;
+    height: auto;
+}
+
+.logo-size2 {
+    width: 120px;
+    height: auto;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+}
+
+.logo-size2a {
+    width: 65px;
+    height: auto;
+}
+
+.logo-size3 {
+    width: 35px;
+    height: auto;
+}
+
+.logo-size4 {
+    padding: 10px;
+    margin-top: 25px;
+    width: 120px;
+    height: auto;
+}
+
+.logo-size5 {
+    padding: 10px;
+    margin-top: 25px;
+    width: 120px;
+    height: auto;
+}
+
+.rounded-custom {
+    border-radius: 0 0 15px 0;
+}
+
+.h-1 {
+    height: 10px;
+}
+
+.h-50 {
+    height: 105px;
+}
+
+.height-600 {
+    height: 600px;
+}
+
+.height-100 {
+    height: 1000px;
+}
+
+.height-90 {
+    height: 900px;
+    display: block;
+    overflow: hidden;
+}
+
+.height-250 {
+    height: 250px;
+}
+
+.bg-kaya101 {
+    background: rgb(207, 29, 253);
+    background: linear-gradient(90deg, rgba(207, 29, 253, 0.9037815809917717) 0%, rgba(162, 20, 199, 1) 0%);
+}
+
+.reality-senteces {
+    color: #000;
+    font-size: 60px;
+    font-family: 'Londrina Shadow', cursive;
+}
+
+.nav-item a {
+    font-family: 'Oxanium', cursive;
+    font-size: 18px;
+    color: #C0C0C0;
+    margin: 5px;
+}
+
+.nav-item a:hover {
+    color: purple;
+}
+
+.nav-item .bg-kaya-purple {
+    margin: 3px;
+    color: white;
+    background-color: purple;
+    border-radius: 100% 50px;
+}
+
+.nav-item .bg-kaya-purple:hover {
+    color: blueviolet;
+    background-color: white;
+    border: 1px solid blueviolet;
+    text-decoration: none;
+}
+
+#actives-nav-item {
+    color: purple;
+}
+
+.join-to-us {
+    position: absolute;
+    color: white;
+    left: -5px;
+    border: none!important;
+}
+
+.join-buttons a {
+    font-family: 'Oxanium', cursive;
+    text-decoration-line: none;
+    color: white;
+    font-size: 18px;
+}
+
+.join-buttons a:hover {
+    background-color: white;
+    color: purple;
+}
+
+.join-to-us a {
+    color: white;
+}
+
+.rounded-left-right {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.bg-kaya-navbar {
+    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+}
+
+.border-casual {
+    border-top: 4px solid #000;
+    color: white;
+    font-size: 15px;
+    font-family: 'Oxanium', cursive;
+}
+
+.border-casual a {
+    color: white;
+    text-decoration: none;
+}
+
+.border-casual a:hover {
+    color: blueviolet;
+}
+
+.letter-size {
+    width: 300px;
+    height: auto;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.bg-send-message a {
+    margin: 15px;
+    color: white;
+    background-color: purple;
+    border-radius: 100% 50px;
+    border: none;
+}
+
+.bg-send-message a:hover {
+    color: blueviolet;
+    background-color: white;
+    border: 1px solid blueviolet;
+    text-decoration: none;
+}
+
+.font-quest {
+    margin-top: 10px;
+    color: purple;
+    font-size: 60px;
+    font-family: 'Londrina Shadow', cursive;
+}
+
+.border-custom-purple {
+    border: 10px solid purple;
+    margin-top: 25px;
+    border-style: ridge;
+}
+
+.border-custom-yellow {
+    border: 10px solid yellow;
+    margin-top: 25px;
+    border-style: ridge;
+}
+
+.border-custom-red {
+    border: 10px solid red;
+    margin-top: 25px;
+    border-style: ridge;
+}
+
+.border-custom-blue {
+    border: 10px solid blue;
+    margin-top: 25px;
+    border-style: ridge;
+}
+
+.border-custom-green {
+    border: 10px solid green;
+    margin-top: 25px;
+    border-style: ridge;
+}
+
+.border-custom-brown {
+    border: 10px solid brown;
+    margin-top: 25px;
+    border-style: ridge;
+}
+
+.squarem {
+    border: 20px solid purple;
+    margin-top: 25px;
+    border-style: ridge;
+    background-color: #C0C0C0;
+}
+
+.squarem .col-md-4 p {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.margin-resize {
+    margin-top: 50px;
+    margin-left: auto;
+}
+
+.navbar-down {
+    position: absolute;
+    bottom: -2150px;
+}
+
+.high-size {
+    padding: 40px;
+}
+
+.card-image {
+    width: 150px;
+    height: auto;
+}
+
+.btn-purple {
+    background-color: purple;
+}
+
+.text-purple {
+    color: purple;
+    font-size: 18px;
+}
+
+.text-rubik {
+    font-family: 'Rubik', sans-serif;
+    font-size: 23px;
+}
+
+.text-rubik-lg {
+    font-family: 'Rubik', sans-serif;
+    font-size: 28px;
+}
+
+.text-slabo {
+    font-family: 'Slabo 27px', serif;
+    font-size: 18px;
+}
+
+.text-exo-lg {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 35px;
+}
+
+.carousel-image-resize {
+    width: 1200px;
+    height: 600px;
+}
+
+@media only screen and (max-width: 600px) {
+    .height-100 {
+        height: 100%;
+    }
+    .reality-senteces {
+        display: none;
+    }
+    .join-to-us {
+        position: absolute;
+        left: 0px;
+        top: 100%;
+    }
+    .height-250 {
+        position: absolute;
+        display: inline-block;
+        top: 1250px;
+    }
+    .rounded-left-right {
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+    .letter-size {
+        width: 70%;
+        height: auto;
+        margin-bottom: 40px;
+    }
+    .logo-size5 {
+        width: 65px;
+        height: auto;
+        margin-top: 5px;
+    }
+    .navbar-down {
+        position: absolute;
+        top: 4680px;
+    }
+    .mobile-height {
+        height: 500px;
+    }
+    .container-fluid {
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+        height: auto;
+    }
+}

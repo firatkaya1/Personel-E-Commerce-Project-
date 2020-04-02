@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <link rel="shortcut icon" href="/img/focus.png"/>
+    <link href="https://fonts.googleapis.com/css?family=Oxanium&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kanit&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Michroma&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Londrina+Shadow&display=swap" rel="stylesheet">
+
+
+    <title>Blog</title>
+</head>
+
+<body>
+    <div class="container-fluid bg-purple high-size">
+        <div class="container-fluid  height-100 bg-white width-custom">
+            <div class="row">
+                <div class="col-md-5 d-inline-block">
+                    <div class="row mx-auto">
+                        <div class="col-12 team-area"> <img src="/img/focus.png" alt="logo" class="logo-size"> firat kaya/Blog
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7 d-inline-block">
+                    <nav class="navbar navbar-expand-lg navbar-light ">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="nav mx-auto mt-4">
+                                <li class="nav-item">
+                                    <a class="nav-link" id="actives-nav-item" th:href="@{/index}">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" th:href="@{/contact}">Contact</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" th:href="@{/products}">Products</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" th:href="@{/team}">Team</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" th:href="@{/blog}">Blog</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link bg-kaya-purple" href="#">Projects</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-md-12 mt-4 mb-4 text-center">
+                    <p class="reality-senteces">We will be here as soon as...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="border-casual position-absoute d-inline-block">
+        <div class="row bg-dark p-4">
+            <div class="col-md-3">
+                <div class="row ">
+                    <div class="col-md-12 p-2">
+                        <h3><a href="#">References</a></h3>
+                    </div>
+                    <div class="col-md-12 p-2">
+                        <a href="#"><img class="logo-size3" src="/img/vegetable.png" alt="references"> Vegatabacco Caffe</a>
+                    </div>
+                    <div class="col-md-12 p-2">
+                        <a href="#"><img class="logo-size3" src="/img/backpack.png" alt="references"> School Manangement Systems</a>
+                    </div>
+                    <div class="col-md-12 p-2">
+                        <a href="#"><img class="logo-size3" src="/img/coffee.png" alt="references"> Sonakaa Pub</a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="row">
+                    <div class="col-md-12 p-2">
+                        <h3><a href="#">About Us</a></h3>
+                    </div>
+                    <div class="col-md-12 p-2"><a href="#">Team</a></div>
+                    <div class="col-md-12 p-2"><a href="#">Jobs</a></div>
+                    <div class="col-md-12 p-2"><a href="#">Why F.K</a></div>
+                    <div class="col-md-12 p-2"><a href="#">Technologies</a></div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="row">
+                    <div class="col-md-12 p-2">
+                        <h3><a href="#">Products</a></h3>
+                    </div>
+                    <div class="col-md-12 p-2">
+                        <a href="#">How to Buy</a></div>
+                    <div class="col-md-12 p-2">
+                        <a href="#">Selling</a></div>
+                    <div class="col-md-12 p-2"><a href="#">Information</a></div>
+                    <div class="col-md-12 p-2"><a href="#">Help</a></div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="row">
+                    <div class="col-md-12 p-2">
+                        <h3>Where we are</h3>
+                    </div>
+                    <div class="col-md-12 p-2">Map</div>
+                </div>
+            </div>
+            <div class="col-md-12 mt-4">
+                <hr class="bg-white">
+                <p class="text-center">
+                    <a href="https://kayafirat.com"> Fırat Kaya All Right Reserved &copy; 2020 www.kayafirat.com </a></p>
+                <hr class="bg-white">
+
+            </div>
+        </div>
+    </div>
+    <script src="/js/jquery-3.4.1.min.js "></script>
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+</body>
+
+</html>

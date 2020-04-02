@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/admin-custom.css">
+    <title>Panel - Statics </title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+        <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Kayatech.me</a>
+        <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+        <ul class="navbar-nav px-3">
+            <li class="nav-item text-nowrap">
+                <a class="nav-link" href="#">Sign out</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container-fluid ">
+        <div class="row">
+            <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/admin/main}">
+                                <span data-feather="home"></span> Ana Ekran 
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/admin/product}">
+                                <span data-feather="file"></span> Ürünler 
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " th:href="@{/admin/product-settings}">
+                                <span data-feather="shopping-cart"></span> Ürün Ayarları 
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " th:href="@{/admin/message}">
+                                <span data-feather="message-square"></span> Mesajlar
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/admin/comment}">
+                                <span data-feather="shopping-cart"></span> Yorumlar
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" th:href="@{/admin/statics}"> 
+                                <span data-feather="bar-chart-2"></span> İstatistikler <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="layers"></span> Üye Ayarları
+                            </a>
+                        </li>
+                    </ul>
+
+                    <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                        <span>Geçmiş</span>
+                        <a class="d-flex align-items-center text-muted" href="#" aria-label="Add a new report">
+                            <span data-feather="plus-circle"></span>
+                        </a>
+                    </h6>
+                    <ul class="nav flex-column mb-2">
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/admin/error-message}">
+                                <span data-feather="file-text"></span> Hata Mesajları
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/admin/delete-message}">
+                                <span data-feather="file-text"></span> Silinen Mesajlar
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/admin/settings}">
+                                <span data-feather="settings"></span> Ayarlar 
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/admin/logout}">
+                                <span data-feather="log-out"></span> Çıkış 
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">İstatistikler</h1>
+                    <div class="btn-toolbar mb-2 mb-md-0">
+                        <div class="btn-group mr-2">
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+                        </div>
+                        <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
+                      <span data-feather="calendar"></span>
+                      This week
+                    </button>
+                    </div>
+                </div>
+
+                <canvas class="my-4" id="myChart" width="900" height="380"></canvas>
+
+                <div class="myarea">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+                                <div class="card-header">Toplam Görüntüleme</div>
+                                <div class="card-body">
+                                    <h3 class="card-title">1,456</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+                                <div class="card-header">Toplam Yorum</div>
+                                <div class="card-body">
+                                    <h3 class="card-title">2,200</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+                                <div class="card-header">Okunmamış Mesaj Sayısı</div>
+                                <div class="card-body">
+                                    <h3 class="card-title">66</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+                                <div class="card-header">Toplam Ürün Sayısı</div>
+                                <div class="card-body">
+                                    <h3 class="card-title">129</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+            </main>
+
+
+
+        </div>
+	</div>
+
+        <script src="/js/jquery-3.4.1.min.js "></script>
+        <script src="/js/bootstrap.js "></script>
+        <script src="/js/bootstrap.min.js "></script>
+        <script src="/js/feather.min.js "></script>
+        <script src="/js/Chart.min.js"></script>
+        <script src="/js/dashboard.js"></script>
+</body>
+
+</html>

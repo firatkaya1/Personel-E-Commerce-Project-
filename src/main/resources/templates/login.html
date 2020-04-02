@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/admin-custom.css">
+    <title>Login - KayaPanel</title>
+</head>
+
+<body style="background-color: #eeeeee;">
+
+    <div class="container">
+        <form th:action="@{/admin/login}" method="post" class="mx-auto p-4 border border-primary shadow mt-4" style="width: 50%;">
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" name="username" id="email" aria-describedby="emailHelp">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" name="password" id="password">
+            </div>
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Remember me?</label>
+            </div>
+            <button type="submit" class="btn btn-outline-primary ">Sign In</button>
+        </form>
+    </div>
+
+
+
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

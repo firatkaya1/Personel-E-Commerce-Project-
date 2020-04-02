@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <link rel="shortcut icon" href="/img/focus.png"/>
+    <link href="https://fonts.googleapis.com/css?family=Oxanium&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kanit&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Michroma&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Londrina+Shadow&display=swap" rel="stylesheet">
+
+
+    <title>Team</title>
+</head>
+
+<body>
+    <div class="container-fluid bg-purple high-size">
+        <div class="container-fluid bg-white width-custom">
+            <div class="row">
+                <div class="col-md-5 d-inline-block">
+                    <div class="row mx-auto">
+                        <div class="col-12 team-area"> <img src="img/focus.png" alt="logo" class="logo-size"> firat kaya/Team <img class="logo-size3" src="img/heart.png" alt="heart">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7 d-inline-block">
+                    <nav class="navbar navbar-expand-lg navbar-light ">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="nav mx-auto mt-4">
+                                <li class="nav-item">
+                                    <a class="nav-link" id="actives-nav-item" th:href="@{/index}">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" th:href="@{/contact}">Contact</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" th:href="@{/products}">Products</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" th:href="@{/team}">Team</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" th:href="@{/blog}">Blog</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link bg-kaya-purple" href="#">Projects</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-md-12 mt-4 mb-4 text-center">
+                    <p class="reality-senteces">We are know, We are not the best but We can better for you</p>
+                </div>
+                <div class="col-md-6 mt-4">
+                    <div class="card mb-3 border-custom-purple">
+                        <div class="row">
+                            <div class="col-md-4 text-center">
+                                <img src="img/boss.png" class="card-img logo-size5" alt="man">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Fırat Kaya - Team Leader</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mt-4">
+                    <div class="card mb-3 border-custom-yellow">
+                        <div class="row">
+                            <div class="col-md-4 text-center">
+                                <img src="img/man2.png" class="card-img logo-size5" alt="man">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Fırat Kaya - Full Stack Developer</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-3 border-custom-red">
+                        <div class="row">
+                            <div class="col-md-4 text-center">
+                                <img src="img/man.png" class="card-img logo-size5" alt="man">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Fırat Kaya - Designer</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-3 border-custom-blue">
+                        <div class="row">
+                            <div class="col-md-4 text-center">
+                                <img src="img/man.png" class="card-img logo-size5" alt="man">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Fırat Kaya - Assistan Designer</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card mb-3 border-custom-green">
+                        <div class="row">
+                            <div class="col-md-4 text-center">
+                                <img src="img/customer-service.png" class="card-img logo-size5" alt="man">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Fırat Kaya - Customer Service</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card mb-3 border-custom-brown">
+                        <div class="row">
+                            <div class="col-md-4 text-center">
+                                <img src="img/boss.png" class="card-img logo-size5" alt="man">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Fırat Kaya - Back End Developer</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="border-casual position-absoute d-inline-block">
+        <div class="row bg-dark p-4">
+            <div class="col-md-3">
+                <div class="row ">
+                    <div class="col-md-12 p-2">
+                        <h3><a href="#">References</a></h3>
+                    </div>
+                    <div class="col-md-12 p-2">
+                        <a href="#"><img class="logo-size3" src="/img/vegetable.png" alt="references"> Vegatabacco Caffe</a>
+                    </div>
+                    <div class="col-md-12 p-2">
+                        <a href="#"><img class="logo-size3" src="/img/backpack.png" alt="references"> School Manangement Systems</a>
+                    </div>
+                    <div class="col-md-12 p-2">
+                        <a href="#"><img class="logo-size3" src="/img/coffee.png" alt="references"> Sonakaa Pub</a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="row">
+                    <div class="col-md-12 p-2">
+                        <h3><a href="#">About Us</a></h3>
+                    </div>
+                    <div class="col-md-12 p-2"><a href="#">Team</a></div>
+                    <div class="col-md-12 p-2"><a href="#">Jobs</a></div>
+                    <div class="col-md-12 p-2"><a href="#">Why F.K</a></div>
+                    <div class="col-md-12 p-2"><a href="#">Technologies</a></div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="row">
+                    <div class="col-md-12 p-2">
+                        <h3><a href="#">Products</a></h3>
+                    </div>
+                    <div class="col-md-12 p-2">
+                        <a href="#">How to Buy</a></div>
+                    <div class="col-md-12 p-2">
+                        <a href="#">Selling</a></div>
+                    <div class="col-md-12 p-2"><a href="#">Information</a></div>
+                    <div class="col-md-12 p-2"><a href="#">Help</a></div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="row">
+                    <div class="col-md-12 p-2">
+                        <h3>Where we are</h3>
+                    </div>
+                    <div class="col-md-12 p-2">Map</div>
+                </div>
+            </div>
+            <div class="col-md-12 mt-4">
+                <hr class="bg-white">
+                <p class="text-center">
+                    <a href="https://kayafirat.com"> Fırat Kaya All Right Reserved &copy; 2020 www.kayafirat.com </a></p>
+                <hr class="bg-white">
+
+            </div>
+        </div>
+    </div>
+    <script src="/js/jquery-3.4.1.min.js "></script>
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+</body>
+
+</html>

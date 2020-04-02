@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/admin-custom.css">
+    <title>Panel - Products Delete</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+        <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Kayatech.me</a>
+        <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+        <ul class="navbar-nav px-3">
+            <li class="nav-item text-nowrap">
+                <a class="nav-link" href="index.html">Sign out</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container-fluid ">
+        <div class="row">
+            <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/admin/main}">
+                                <span data-feather="home"></span> Ana Ekran 
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " th:href="@{/admin/product}">
+                                <span data-feather="file"></span> Ürünler
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" th:href="@{/admin/product-settings}">
+                                <span data-feather="shopping-cart"></span> Ürün Ayarları <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " th:href="@{/admin/message}">
+                                <span data-feather="message-square"></span> Mesajlar
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/admin/comment}">
+                                <span data-feather="shopping-cart"></span> Yorumlar
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/admin/statics}">
+                                <span data-feather="bar-chart-2"></span> İstatistikler
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="layers"></span> Üye Ayarları
+                            </a>
+                        </li>
+                    </ul>
+
+                    <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                        <span>Geçmiş</span>
+                        <a class="d-flex align-items-center text-muted" href="#" aria-label="Add a new report">
+                            <span data-feather="plus-circle"></span>
+                        </a>
+                    </h6>
+                    <ul class="nav flex-column mb-2">
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/admin/error-message}">
+                                <span data-feather="file-text"></span> Hata Mesajları
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/admin/delete-message}">
+                                <span data-feather="file-text"></span> Silinen Mesajlar
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/admin/settings}">
+                                <span data-feather="settings"></span> Ayarlar
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/admin/logout}">
+                                <span data-feather="log-out"></span> Çıkış
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <a th:href="@{/admin/product-settings}"><button class="btn btn-success">Geri Dön</button></a>
+                    <h1 class="h2">Ürün Sil</h1>
+                    <div class="btn-toolbar mb-2 mb-md-0">
+                        <div class="btn-group mr-2">
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+                        </div>
+                        <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
+                      <span data-feather="calendar"></span>
+                      This week
+                    </button>
+                    </div>
+                </div>
+
+                <div class="formarea">
+                    <form th:action="@{/admin/product-delete}" th:object="${product}" method="post">
+                        <div class="form-group">
+                            <label for="productHeader">Ürün Başlığı</label>
+                            <input type="text"  th:field="*{productTitle}" class="form-control" id="productHeader" placeholder="Ürün Başlıgını Girin">
+                        </div>
+                        <div class="form-row">
+                            <div class="col-2">
+                                <input type="text" th:field="*{productPrice}" class="form-control" placeholder="Ürün Fiyatı">
+                            </div>
+                            <div class="col-2">
+                                <input type="text" th:field="*{productTestLink}" class="form-control" placeholder="Test Linki">
+                            </div>
+                            <div class="col-2">
+                                <input type="text" th:field="*{productCode}" class="form-control" placeholder="Ürün Kodu" id="inputRandomCode">
+                            </div>
+                            <div class="col-2">
+                                <input type="text" th:field="*{productDiscountCode}" class="form-control" placeholder="İndirim Kodu" id="inputDiscountCode">
+                            </div>
+                        </div>
+                        <div class="form-row mt-3 ">
+                            <div class="col-2">
+                                <select th:field="*{productTag}" class="custom-select">
+                                    <option th:value="'Form'">Form</option>
+                                    <option th:value="'Button'">Button</option>
+                                    <option th:value="'Arayüz'">Arayüz</option>
+                                    <option th:value="'Diğer'">Diğer</option>
+                                  </select>
+                            </div>
+                            <div class="col-2">
+                                <input type="text" th:field="*{productOwner}" class="form-control" placeholder="Ürün Sahip Adını Gir">
+                            </div>
+                            <div class="col-4">
+                                <input type="text" th:field="*{productOwnerEmail}" class="form-control" placeholder="Ürün Sahibin Email Adresini Gir">
+                            </div>
+                            <div class="col-2">
+                                <button class="btn btn-dark">Default Degerleri Ekle</button>
+                            </div>
+                        </div>
+                        <div class=" form-row mt-3 ">
+                            <div class="col-10 ">
+                                <label for="productExplain ">Ürün Açıklamasını Gir</label>
+                                <textarea class="form-control " th:field="*{productDescription}" id="productExplain" rows="5 "></textarea>
+                            </div>
+                        </div>
+                        <div class="form-row mt-4 ">
+                            <div class="form-group m-4 ">
+                                <button class="btn btn-danger btn-lg btn-block">Sil</button>
+                            </div>
+                        </div>
+
+                    </form>
+
+                </div>
+
+
+            </main>
+
+
+
+        </div>
+	</div>
+
+        <script src="/js/jquery-3.4.1.min.js "></script>
+        <script src="/js/bootstrap.js "></script>
+        <script src="/js/bootstrap.min.js "></script>
+        <script src="/js/feather.min.js "></script>
+        <script src="/js/Chart.min.js"></script>
+        <script src="/js/dashboard.js"></script>
+</body>
+
+</html>
