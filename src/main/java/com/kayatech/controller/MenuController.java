@@ -220,7 +220,6 @@ public class MenuController {
 	}
 	@PostMapping("/error-message")
 	public String errorMessage() {
-		System.out.println("error-message POST çalıştı.");
 		return "/error-message";
 	}
 	
