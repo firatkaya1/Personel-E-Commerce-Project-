@@ -49,7 +49,6 @@ public class MenuController {
 	}
 	@PostMapping("/main")
 	public String main() {
-		System.out.println("Main POST çalıştı.");
 		return "/main";
 	}
 	
