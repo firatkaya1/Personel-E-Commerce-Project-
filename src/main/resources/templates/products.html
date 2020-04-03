@@ -40,13 +40,13 @@
                         <div class="collapse navbar-collapse" id="navbarbuton">
                             <ul class="nav mx-auto mt-4">
                                 <li class="nav-item">
-                                    <a class="nav-link" id="actives-nav-item" th:href="@{/index}">About</a>
+                                    <a class="nav-link"  th:href="@{/index}">About</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" th:href="@{/contact}">Contact</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" th:href="@{/products}">Products</a>
+                                    <a class="nav-link" id="actives-nav-item" th:href="@{/products}">Products</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" th:href="@{/team}">Team</a>
@@ -79,20 +79,20 @@
                                 <p>Tüm tasarımlar mobil uyumludur.</p>
                             </li>
                             <li>
-                                <p>Ücretli tasarımlara erişebilmek için lütfen bizimle <a href="contact.html">iletişim</a> kurun.</p>
+                                <p>Ücretli tasarımlara erişebilmek için lütfen bizimle <a th:href="@{/contact}">iletişim</a> kurun.</p>
                             </li>
                         </ul>
                     </div>
                     <div class="col-md-12">
-                        <div class="text-right bg-send-message"><a class="p-3" href="forms.html">Continue &rarr;</a></div>
+                        <div class="text-right bg-send-message"><a class="p-3" th:href="@{/products/forms}">Continue &rarr;</a></div>
                     </div>
                     <div class="col-md-12 margin-resize">
                         <div class="row w-100 ">
-                            <div class="col-2"><img class="logo-size" src="img/star.png" alt="star"></div>
-                            <div class="col-2"><img class="logo-size" src="img/star.png" alt="star"></div>
-                            <div class="col-2"><img class="logo-size" src="img/star.png" alt="star"></div>
-                            <div class="col-2"><img class="logo-size" src="img/star.png" alt="star"></div>
-                            <div class="col-2"><img class="logo-size" src="img/star.png" alt="star"></div>
+                            <div class="col-2"><img class="logo-size" src="/img/star.png" alt="star"></div>
+                            <div class="col-2"><img class="logo-size" src="/img/star.png" alt="star"></div>
+                            <div class="col-2"><img class="logo-size" src="/img/star.png" alt="star"></div>
+                            <div class="col-2"><img class="logo-size" src="/img/star.png" alt="star"></div>
+                            <div class="col-2"><img class="logo-size" src="/img/star.png" alt="star"></div>
                         </div>
                     </div>
                 </div>
@@ -116,7 +116,7 @@
                                 <p>Tüm tasarımlar mobil uyumludur.</p>
                             </li>
                             <li>
-                                <p>Ücretli tasarımlara erişebilmek için lütfen bizimle <a href="contact.html">iletişim</a> kurun.</p>
+                                <p>Ücretli tasarımlara erişebilmek için lütfen bizimle <a th:href="@{/contact}">iletişim</a> kurun.</p>
                             </li>
                         </ul>
                     </div>
@@ -125,24 +125,24 @@
                     </div>
                     <div class="col-md-12 margin-resize">
                         <div class="row w-100 mb-4">
-                            <div class="col-2"><img class="logo-size" src="img/star.png" alt="star"></div>
-                            <div class="col-2"><img class="logo-size" src="img/star.png" alt="star"></div>
-                            <div class="col-2"><img class="logo-size" src="img/star.png" alt="star"></div>
-                            <div class="col-2"><img class="logo-size" src="img/star.png" alt="star"></div>
-                            <div class="col-2"><img class="logo-size" src="img/star.png" alt="star"></div>
+                            <div class="col-2"><img class="logo-size" src="/img/star.png" alt="star"></div>
+                            <div class="col-2"><img class="logo-size" src="/img/star.png" alt="star"></div>
+                            <div class="col-2"><img class="logo-size" src="/img/star.png" alt="star"></div>
+                            <div class="col-2"><img class="logo-size" src="/img/star.png" alt="star"></div>
+                            <div class="col-2"><img class="logo-size" src="/img/star.png" alt="star"></div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-5 bg-kaya101 h-75 w-100 d-inline-block mx-auto">
                     <div class="row h-100 mx-auto">
                         <div class="col-md-12 d-inline-block position-absolute">
-                            <img class="logo-size5 float-right mr-2" src="img/new.png" alt="new">
+                            <img class="logo-size5 float-right mr-2" src="/img/new.png" alt="new">
                         </div>
-                        <div class="col-12 purple-area"> <img src="img/focus.png" alt="logo" class="logo-size">
+                        <div class="col-12 purple-area"> <img src="/img/focus.png" alt="logo" class="logo-size">
                             <p> firat kaya/Products</p>
                         </div>
                         <div class="col-12 text-center mb-4">
-                            <img class="letter-size mb-4" src="img/login.png" alt="pictures">
+                            <img class="letter-size mb-4" src="/img/login.png" alt="pictures">
                         </div>
                     </div>
                 </div>
@@ -151,8 +151,8 @@
                         <div class="col-12 purple-area"> <img src="img/focus.png" alt="logo" class="logo-size">
                             <p> firat kaya/Products</p>
                         </div>
-                        <div class="col-12 text-center mt-4">
-                            <img class="letter-size" src="img/switch.png" alt="pictures">
+                        <div class="col-12 text-center mt-4">/
+                            <img class="letter-size" src="/img/switch.png" alt="pictures">
                         </div>
                     </div>
                 </div>
@@ -176,7 +176,7 @@
                                 <p>Tüm tasarımlar mobil uyumludur.</p>
                             </li>
                             <li>
-                                <p>Ücretli tasarımlara erişebilmek için lütfen bizimle <a href="contact.html">iletişim</a> kurun.</p>
+                                <p>Ücretli tasarımlara erişebilmek için lütfen bizimle <a th:href="@{/contact}">iletişim</a> kurun.</p>
                             </li>
                         </ul>
                     </div>
@@ -185,11 +185,11 @@
                     </div>
                     <div class="col-md-12 margin-resize">
                         <div class="row w-100 ">
-                            <div class="col-2"><img class="logo-size" src="img/star.png" alt="star"></div>
-                            <div class="col-2"><img class="logo-size" src="img/star.png" alt="star"></div>
-                            <div class="col-2"><img class="logo-size" src="img/star.png" alt="star"></div>
-                            <div class="col-2"><img class="logo-size" src="img/star.png" alt="star"></div>
-                            <div class="col-2"><img class="logo-size" src="img/star.png" alt="star"></div>
+                            <div class="col-2"><img class="logo-size" src="/img/star.png" alt="star"></div>
+                            <div class="col-2"><img class="logo-size" src="/img/star.png" alt="star"></div>
+                            <div class="col-2"><img class="logo-size" src="/img/star.png" alt="star"></div>
+                            <div class="col-2"><img class="logo-size" src="/img/star.png" alt="star"></div>
+                            <div class="col-2"><img class="logo-size" src="/img/star.png" alt="star"></div>
                         </div>
                     </div>
                 </div>
@@ -198,7 +198,7 @@
                         <div class="row text-center">
                             <div class="col-md-4">
                                 <div class="row">
-                                    <div class="col-md-12"><img class="logo-size4" src="img/buy.png" alt="buy"></div>
+                                    <div class="col-md-12"><img class="logo-size4" src="/img/buy.png" alt="buy"></div>
                                     <div class="col-md-12">
                                         <p>Security Pay</p>
                                     </div>
@@ -206,7 +206,7 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="row">
-                                    <div class="col-md-12"><img class="logo-size4" src="img/paper-plane.png" alt="deliver"></div>
+                                    <div class="col-md-12"><img class="logo-size4" src="/img/paper-plane.png" alt="deliver"></div>
                                     <div class="col-md-12">
                                         <p>Fast Deliver</p>
                                     </div>
@@ -214,7 +214,7 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="row">
-                                    <div class="col-md-12"><img class="logo-size4" src="img/review.png" alt="review"></div>
+                                    <div class="col-md-12"><img class="logo-size4" src="/img/review.png" alt="review"></div>
                                     <div class="col-md-12">
                                         <p>High Satisfaction</p>
                                     </div>
@@ -222,7 +222,7 @@
                             </div>
                             <div class="col-md-12 mt-4">
                                 <p class="font-quest">Do you have more question ? </p>
-                                <p style="color: purple;"><a style="text-decoration: none;color: purple;" href="contact.html"><u>Contact</u></a> with us</p>
+                                <p style="color: purple;"><a style="text-decoration: none;color: purple;" th:href="@{/contact}"><u>Contact</u></a> with us</p>
                             </div>
                         </div>
                     </div>

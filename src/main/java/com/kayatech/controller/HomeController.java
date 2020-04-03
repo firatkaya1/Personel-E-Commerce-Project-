@@ -26,11 +26,16 @@ public class HomeController {
 	
 	@GetMapping(value = "/products")
 	public String products(Model model) {
-		return "/contact";
+		return "/products";
 	}
 	@PostMapping(value = "/products")
 	public String products() {
 		return "/products";
+	}
+	
+	@GetMapping(value = "/products/forms")
+	public String forms(Model model) {
+		return "/forms";
 	}
 	
 	@GetMapping(value = "/team")
@@ -49,6 +54,15 @@ public class HomeController {
 	@PostMapping(value = "/blog")
 	public String blog() {
 		return "/blog";
+	}
+	
+	@GetMapping(value = "/product/forms/buy")
+	public String buy(Model model) {
+		return "/buy";
+	}
+	@PostMapping(value = "/product/forms/buy")
+	public String buy() {
+		return "/buy";
 	}
 	
 }
