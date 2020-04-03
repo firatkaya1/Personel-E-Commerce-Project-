@@ -35,12 +35,10 @@ public class MenuController {
 	
 	@GetMapping("/")
 	public String index(Model model) {
-		System.out.println("index GET çalıştı.");
 		return "/main";
 	}
 	@PostMapping("/")
 	public String index() {
-		System.out.println("index POST çalıştı.");
 		return "/main";
 	}
 	
