@@ -61,7 +61,6 @@ public class MenuController {
 	
 	@PostMapping("/product")
 	public String product() {
-		System.out.println("product POST çalıştı.");
 		return "/product";
 	}
 	
