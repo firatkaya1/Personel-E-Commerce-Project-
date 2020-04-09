@@ -23,5 +23,6 @@ public interface MessageService {
 	
 	Message updateMessage(Message message);
 	
+	
 	String dateFormat(Date date);
 }
