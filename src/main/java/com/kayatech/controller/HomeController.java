@@ -1,10 +1,15 @@
 package com.kayatech.controller;
 
+import java.util.Date;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.kayatech.model.Message;
 
 @Controller
 @RequestMapping("/")
@@ -17,10 +22,22 @@ public class HomeController {
 	
 	@GetMapping(value = "/contact")
 	public String contact(Model model) {
+		model.addAttribute("message",new Message());
 		return "/contact";
 	}
+	
 	@PostMapping(value = "/contact")
-	public String contact() {
+	public String contact(@ModelAttribute Message message) {
+		
+		message.setMessageDate(new Date().toString());
+		message.setProductTag("Contact");
+		message.setProductCode("000000");
+		message.setMessageTO("contact@contact.com");
+		
+		
+		System.out.println(message.toString());
+		
+		
 		return "/contact";
 	}
 	

@@ -1,5 +1,6 @@
 package com.kayatech.service;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
@@ -21,4 +22,6 @@ public interface MessageService {
 	Message findById(Long id);
 	
 	Message updateMessage(Message message);
+	
+	String dateFormat(Date date);
 }

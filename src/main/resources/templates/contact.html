@@ -66,41 +66,50 @@
                             Ekip olarak sizlerden gelen her türlü fikir ve önerilerinize açığız. Aşağıdaki metni doldur ve seninle iletişime geçelim. Eğer fazla sabırsız biri ise eğer bizimle direk kaya@kayafirat.com adresinden iletişime geçebilirsin.
                         </p>
                     </div>
+                    <form th:action="@{/contact}" th:object="${message}" method="post">
                     <div class="col-md-12">
                         <div class="row">
+                        <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="username">Ismin</label>
+                                    <input type="text" class="form-control" th:field="*{messageName}"  id="username" placeholder="name">
+                                </div>
+                            </div>
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="emailAdress">Email adresin</label>
-                                    <input type="email" class="form-control" id="emailAdress" placeholder="name@example.com">
+                                    <input type="email" class="form-control" th:field="*{messageFROM}"  id="emailAdress" placeholder="name@example.com">
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="konu-baslik">İletişim Nedenini Belirt</label>
-                                    <select class="form-control" id="konu-baslik">
-                                      <option>Satın Alım</option>
-                                      <option>Destek</option>
-                                      <option>Öneri/Şikayet</option>
-                                      <option>Diğer</option>
-                                      <option>Belirtmek istemiyorum.</option>
+                                    <select class="form-control" id="konu-baslik" th:field="*{messageType}">
+                                      <option th:value="'Satın Alım'">Satın Alım</option>
+                                      <option th:value="'Destek'">Destek</option>
+                                      <option th:value="'Öneri'">Öneri</option>
+                                      <option th:value="'Şikayet'">Şikayet</option>
+                                      <option th:value="'Diğer'">Diğer</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="message">Mesajını Yaz</label>
-                                    <textarea class="form-control" id="message" rows="4"></textarea>
+                                    <textarea class="form-control" th:field="*{messageDescription}" id="message" rows="4"></textarea>
                                 </div>
                             </div>
                         </div>
-
-
+                        
                     </div>
                     <div class="col-md-12 h-100 w-100">
                         <div class="row mt-4">
-                            <div class="col-md-12 text-right bg-send-message"><a class="p-3" href="#">Send Message</a></div>
+                            <div class="col-md-12 text-right bg-send-message">
+                            	<input type="Submit" name="submit" class="col-md-12 text-right bg-send-message" value="Send Message">
+                            </div>
                         </div>
                     </div>
+                    </form>
                 </div>
                 <div class="col-md-12 text-center">
                     <p class="reality-senteces">There is no darkness but ignorance.</p>
