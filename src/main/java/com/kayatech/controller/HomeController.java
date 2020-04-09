@@ -2,6 +2,7 @@ package com.kayatech.controller;
 
 import java.util.Date;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,10 +11,14 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.kayatech.model.Message;
+import com.kayatech.service.MessageService;
 
 @Controller
 @RequestMapping("/")
 public class HomeController {
+	
+	@Autowired
+	MessageService messageService;
 
 	@GetMapping(value = "/index")
 	public String index() {
@@ -29,7 +34,7 @@ public class HomeController {
 	@PostMapping(value = "/contact")
 	public String contact(@ModelAttribute Message message) {
 		
-		message.setMessageDate(new Date().toString());
+		message.setMessageDate(messageService.dateFormat(new Date()));
 		message.setProductTag("Contact");
 		message.setProductCode("000000");
 		message.setMessageTO("contact@contact.com");

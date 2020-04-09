@@ -1,5 +1,7 @@
 package com.kayatech.service.Impl;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -75,6 +77,13 @@ public class MessageServicesImpl implements MessageService {
 		m1.setMessageDescription(message.getMessageDescription());
 		
 		return messageRepository.save(m1);
+	}
+
+	@Override
+	public String dateFormat(Date date) {
+		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		String dateString = format.format(date);		
+		return dateString;
 	}
 
 }
