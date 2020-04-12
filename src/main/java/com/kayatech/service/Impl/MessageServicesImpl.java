@@ -38,11 +38,11 @@ public class MessageServicesImpl implements MessageService {
 		m1.setProductTag(message.getProductTag());
 		m1.setMessageName(message.getMessageName());
 		m1.setMessageFROM(message.getMessageFROM());
-		m1.setMessageTO(message.getMessageTO());
-		m1.setMessageDate(message.getMessageDate());
+		m1.setMessageTO("admin@admin.com");
+		m1.setMessageDate(dateFormat(new Date()));
 		m1.setMessageDescription(message.getMessageDescription());
 		
-		return messageRepository.save(message);
+		return messageRepository.save(m1);
 	}
 
 	@Override

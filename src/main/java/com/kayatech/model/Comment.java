@@ -39,10 +39,13 @@ public class Comment {
 	@Column(name = "comment_description")
 	private String commentDescription;
 
+	@Column(name = "comment_like")
+	private int commentLike;
+	
 	public Comment() {}
-
+	
 	public Comment(long id, String commentId, String productCode, String commentEmail, String commentName,
-			String commentTag, String commentDate, boolean commentHide) {
+			String commentTag, String commentDate, boolean commentHide,String commentDescription,int commentLike) {
 		super();
 		this.id = id;
 		this.commentId = commentId;
@@ -52,6 +55,9 @@ public class Comment {
 		this.commentTag = commentTag;
 		this.commentDate = commentDate;
 		this.commentHide = commentHide;
+		this.commentDescription = commentDescription;
+		this.commentLike = commentLike;
+		
 	}
 
 	public long getId() {
@@ -126,11 +132,20 @@ public class Comment {
 		this.commentDescription = commentDescription;
 	}
 
+	public int getCommentLike() {
+		return commentLike;
+	}
+
+	public void setCommentLike(int commentLike) {
+		this.commentLike = commentLike;
+	}
+
 	@Override
 	public String toString() {
 		return "Comment [id=" + id + ", commentId=" + commentId + ", productCode=" + productCode + ", commentEmail="
 				+ commentEmail + ", commentName=" + commentName + ", commentTag=" + commentTag + ", commentDate="
-				+ commentDate + ", commentHide=" + commentHide + ", commentDescription=" + commentDescription + "]";
+				+ commentDate + ", commentHide=" + commentHide + ", commentDescription=" + commentDescription
+				+ ", commentLike=" + commentLike + "]";
 	}
 
 	

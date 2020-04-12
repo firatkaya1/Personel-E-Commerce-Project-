@@ -22,6 +22,14 @@ body {
     margin-left: 5%;
     font-size: 25px;
 }
+.team-area a {
+    font-family: 'Kanit', sans-serif;
+    color: purple;
+    margin-top: 15%;
+    margin-left: 5%;
+    font-size: 25px;
+    text-decoration:none;
+}
 
 .purple-area-text {
     font-family: 'Michroma', sans-serif;
@@ -205,7 +213,22 @@ body {
     margin-bottom: 10%;
 }
 
-.bg-send-message a {
+.bg-send-message  {
+    margin: 15px;
+    color: white;
+    background-color: purple;
+    border-radius: 100% 50px;
+    border: none;
+}
+
+.bg-send-message:hover {
+    color: blueviolet;
+    background-color: white;
+    border: 1px solid blueviolet;
+    text-decoration: none;
+}
+
+.bg-send-message  a{
     margin: 15px;
     color: white;
     background-color: purple;
@@ -219,6 +242,7 @@ body {
     border: 1px solid blueviolet;
     text-decoration: none;
 }
+
 
 .font-quest {
     margin-top: 10px;
@@ -294,6 +318,12 @@ body {
     width: 150px;
     height: auto;
 }
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+
 
 .btn-purple {
     background-color: purple;
@@ -327,6 +357,10 @@ body {
 .carousel-image-resize {
     width: 1200px;
     height: 600px;
+}
+
+.comment-width {
+    width: 50%;
 }
 
 @media only screen and (max-width: 600px) {
@@ -372,5 +406,8 @@ body {
         padding: 0px;
         width: 100%;
         height: auto;
+    }
+    .comment-width {
+        width: 100%;
     }
 }

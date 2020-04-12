@@ -114,6 +114,8 @@
                         <div class="form-group">
                             <label for="productHeader">Ürün Başlığı</label>
                             <input type="text"  th:attr="value = ${productTitle}" th:field="*{productTitle}" class="form-control" id="productHeader" placeholder="Ürün Başlıgını Girin">
+                        	<input type="text"  th:attr="value = ${id}" th:field="*{id}" class="form-control" id="productID" placeholder="Ürün Id">
+                        	
                         </div>
                         <div class="form-row">
                             <div class="col-2">
@@ -132,10 +134,10 @@
                         <div class="form-row mt-3 ">
                             <div class="col-2">
                                 <select th:attr="value = ${productTag}" th:field="*{productTag}" class="custom-select">
-                                    <option th:value="'Form'">Form</option>
-                                    <option th:value="'Button'">Button</option>
-                                    <option th:value="'Arayüz'">Arayüz</option>
-                                    <option th:value="'Diğer'">Diğer</option>
+                                    <option th:value="'form'">Form</option>
+                                    <option th:value="'element'">Button</option>
+                                    <option th:value="'login'">Arayüz</option>
+                                    <option th:value="'other'">Diğer</option>
                                   </select>
                             </div>
                             <div class="col-2">

@@ -17,6 +17,8 @@ public interface CommentService {
 	
 	Comment findByCommentId(String commentId);
 	
+	List<Comment> findByProductCode(String productCode);
+	
 	List<Comment> getAllComments();
 	
 }

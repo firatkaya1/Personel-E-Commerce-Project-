@@ -135,7 +135,7 @@ public class MenuController {
 	
 	@GetMapping("/message")
 	public String message(Model model) {
-		model.addAttribute("messages",messageService.getTypeMessage(MessageType.BUY));
+		model.addAttribute("messages",messageService.getAllMessages());
 		return "/message";
 	}
 	

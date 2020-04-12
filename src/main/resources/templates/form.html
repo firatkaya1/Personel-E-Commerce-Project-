@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
 
 
-    <title>Best Forms Elements</title>
+    <title>Best form Elements</title>
 </head>
 
 <body>
@@ -59,59 +59,25 @@
                     </nav>
                 </div>
             </div>
-            <div class="w-100"></div>
-            <div class="row p-4 mt-4">
-                <div class="card-deck">
-                    <div class="card">
-                        <img src="/img/form.png" class="card-img-top card-image mx-auto mt-4" alt="form">
-                        <div class="card-body">
-                            <h5 class="card-title">Kırlangıç Form</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        </div>
-                        <div class="row h-25 mt-2 mr-0 ml-0 mb-4">
-                            <div class="col-12">
-                                <a th:href="@{/product/forms/buy}"><input type="button" value="39.99 $" class="btn btn-success btn-block text-rubik"></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="/img/form.png" class="card-img-top card-image mx-auto mt-4" alt="form">
-                        <div class="card-body">
-                            <h5 class="card-title">Kırlangıç Form</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        </div>
-                        <div class="row h-25 mt-2 mr-0 ml-0 mb-4">
-                            <div class="col-12">
-                                <a th:href="@{/product/forms/buy}"><input type="button" value="39.99 $" class="btn btn-success btn-block text-rubik"></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="/img/form.png" class="card-img-top card-image mx-auto mt-4" alt="form">
-                        <div class="card-body">
-                            <h5 class="card-title">Kırlangıç Form</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        </div>
-                        <div class="row h-25 mt-2 mr-0 ml-0 mb-4">
-                            <div class="col-12">
-                                <a th:href="@{/product/forms/buy}"><input type="button" value="39.99 $" class="btn btn-success btn-block text-rubik"></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="/img/form.png" class="card-img-top card-image mx-auto mt-4" alt="form">
-                        <div class="card-body">
-                            <h5 class="card-title">Kırlangıç Form</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        </div>
-                        <div class="row h-25 mt-2 mr-0 ml-0 mb-4">
-                            <div class="col-12">
-                                <a th:href="@{/product/forms/buy}"><input type="button" value="39.99 $" class="btn btn-success btn-block text-rubik"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+           		<div class="w-100"></div>
+	            <div class="row p-4 mt-4">
+	                <div class="card-deck">
+	                    <div class="col-3" th:each="product : ${products}">
+	                        <div class="card mt-4">
+	                            <img th:src="${product.productHeaderImage}" class="card-img-top card-image mx-auto mt-4 p-4" alt="form">
+	                            <div class="card-body">
+	                                <h5 class="card-title" th:text="${product.productTitle}"></h5>
+									<p class="card-text" th:text="${product.productDescription}"></p>                           
+								</div>
+	                            <div class="row h-25 mt-2 mr-0 ml-0 mb-4">
+	                                <div class="col-12">
+	                                    <a th:href="@{'/products/' + ${product.productTag} + '/' + buy(productCode=${product.productCode})}"><input type="button" th:value="${product.productPrice}" class="btn btn-success btn-block text-rubik"></a>
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
             </div>
             <div class="w-100"></div>
             <div class="row">

@@ -122,9 +122,10 @@
                                 <th>#</th>
                                 <th>ID</th>
                                 <th>Product Code</th>
-                                <th>Product Tag</th>
+                                <th>Tag</th>
                                 <th>From</th>
-                                <th>TO</th>
+                                <th>To</th>
+                                <th>Date</th>
                                 <th>Show</th>
                                 <th>Delete</th>
                             </tr>
@@ -139,6 +140,7 @@
                                 <td th:text="${message.productTag}"></td>
                                 <td th:text="${message.messageFROM}"></td>
                                 <td th:text="${message.messageTO}"></td>
+                                <td th:text="${message.messageDate}"></td>
                                 <td>
                                     <a th:href="@{/admin/message-show(messageId=${message.id})}"><button class="btn btn-sm btn-success button-text">Show</button></a>
                                 </td>

@@ -54,7 +54,6 @@ public class ProductServiceImpl implements ProductService {
 		
 		Product p = new Product();
 		
-		p.setId(product.getId());
 		p.setProductCode(product.getProductCode());
 		p.setProductTitle(product.getProductTitle());
 		p.setProductPrice(product.getProductPrice());
@@ -78,6 +77,7 @@ public class ProductServiceImpl implements ProductService {
 		
 		Product p = new Product();
 		
+		p.setId(product.getId());
 		p.setProductCode(product.getProductCode());
 		p.setProductTitle(product.getProductTitle());
 		p.setProductPrice(product.getProductPrice());
