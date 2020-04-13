@@ -134,5 +134,22 @@ public class HomeController {
 		return "redirect:/products/"+productTag+"/buy?productCode="+comment.getProductCode();
 	}
 	
+	@GetMapping(value = "/technologies")
+	public String technologies(Model model) {
+		return "/technologies";
+	}
+	@PostMapping(value = "/technologies")
+	public String technologies() {
+		return "/technologies";
+	}
+	
+	@GetMapping(value = "/career")
+	public String career(Model model) {
+		return "/career";
+	}
+	@PostMapping(value = "/career")
+	public String career() {
+		return "/career";
+	}
 	
 }

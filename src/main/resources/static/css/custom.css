@@ -362,6 +362,13 @@ body {
 .comment-width {
     width: 50%;
 }
+.svg-career-logos {
+    width: 25%;
+}
+
+.svg-career-logos1 {
+    width: 10%;
+}
 
 @media only screen and (max-width: 600px) {
     .height-100 {
@@ -407,7 +414,9 @@ body {
         width: 100%;
         height: auto;
     }
-    .comment-width {
+    .comment-width,
+    .svg-career-logos,
+    .svg-career-logos1 {
         width: 100%;
     }
 }

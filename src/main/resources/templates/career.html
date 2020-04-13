@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/custom.css">
+    <link rel="shortcut icon" href="/img/focus.svg" />
+    <link href="https://fonts.googleapis.com/css?family=Oxanium&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kanit&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Michroma&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Londrina+Shadow&display=swap" rel="stylesheet">
+
+
+    <title>Career</title>
+</head>
+
+<body>
+    <div class="container-fluid bg-purple high-size">
+        <div class="container-fluid  bg-white width-custom">
+            <div class="row">
+                <div class="col-md-5 d-inline-block">
+                    <div class="row mx-auto">
+                        <div class="col-12 team-area"> <img src="/img/focus.png" alt="logo" class="logo-size"> firat kaya/Career
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7 d-inline-block">
+                    <nav class="navbar navbar-expand-lg navbar-light ">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="nav mx-auto mt-4">
+                                <li class="nav-item">
+                                    <a class="nav-link"  th:href="@{/index}">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" th:href="@{/contact}">Contact</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" th:href="@{/products}">Products</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" th:href="@{/team}">Team</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" th:href="@{/blog}">Blog</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link bg-kaya-purple" href="#">Projects</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-md-12 mt-4 mb-4 text-center">
+                    <p class="reality-senteces">Work with us. Discover yourself</p>
+                </div>
+                <div class="col-md-12 mt-4 mb-4 text-center">
+                    <p class="reality-senteces" style="color: purple;">hr@kayatech.me</p>
+                </div>
+                <div class="col-md-4 p-4 mx-auto">
+                    <form>
+                        <div class="form-group">
+                            <label for="nameSurname">Name Surname</label>
+                            <input type="text" class="form-control" id="nameSurname">
+                        </div>
+                        <div class="form-group">
+                            <label for="position">Position</label>
+                            <input type="text" class="form-control" id="position">
+                        </div>
+                        <div class="form-group">
+                            <label for="emailAdress">Email Adress</label>
+                            <input type="email" class="form-control" id="emailAdress" aria-describedby="emailHelp">
+                        </div>
+                        <div class="form-group">
+                            <label for="cvResume">Your CV/Resume </label>
+                            <input type="file" class="form-control-file" id="cvResume">
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="acceptCheckbox">
+                            <label class="form-check-label" for="acceptCheckbox">Tüm şartları okudum ve kabul ediyorum.</label>
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="advertiseCheckbox">
+                            <label class="form-check-label" for="advertiseCheckbox">Reklam bildirimleri almak istiyorum.</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary float-right btn-lg btn-mb-lg">Gönder</button>
+                    </form>
+
+                </div>
+                <div class="col-md-12 mx-auto text-center">
+                    <img src="/img/career.svg" alt="career" class="svg-career">
+                </div>
+
+
+
+                <div class="col-md-12 mt-4 mb-4 text-center">
+                    <p class="reality-senteces">Thanks for choose us.</p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+
+    <div class="border-casual position-absoute d-inline-block">
+        <div class="row bg-dark p-4">
+            <div class="col-md-3">
+                <div class="row ">
+                    <div class="col-md-12 p-2">
+                        <h3><a href="#">References</a></h3>
+                    </div>
+                    <div class="col-md-12 p-2">
+                        <a href="#"><img class="logo-size3" src="/img/vegetable.png" alt="references"> Vegatabacco Caffe</a>
+                    </div>
+                    <div class="col-md-12 p-2">
+                        <a href="#"><img class="logo-size3" src="/img/backpack.svg" alt="references"> School Manangement Systems</a>
+                    </div>
+                    <div class="col-md-12 p-2">
+                        <a href="#"><img class="logo-size3" src="/img/coffee.png" alt="references"> Sonakaa Pub</a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="row">
+                    <div class="col-md-12 p-2">
+                        <h3><a href="#">About Us</a></h3>
+                    </div>
+                    <div class="col-md-12 p-2"><a href="#">Team</a></div>
+                    <div class="col-md-12 p-2"><a href="#">Jobs</a></div>
+                    <div class="col-md-12 p-2"><a href="#">Why F.K</a></div>
+                    <div class="col-md-12 p-2"><a href="#">Technologies</a></div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="row">
+                    <div class="col-md-12 p-2">
+                        <h3><a href="#">Products</a></h3>
+                    </div>
+                    <div class="col-md-12 p-2">
+                        <a href="#">How to Buy</a></div>
+                    <div class="col-md-12 p-2">
+                        <a href="#">Selling</a></div>
+                    <div class="col-md-12 p-2"><a href="#">Information</a></div>
+                    <div class="col-md-12 p-2"><a href="#">Help</a></div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="row">
+                    <div class="col-md-12 p-2">
+                        <h3>Where we are</h3>
+                    </div>
+                    <div class="col-md-12 p-2">Map</div>
+                </div>
+            </div>
+            <div class="col-md-12 mt-4">
+                <hr class="bg-white">
+                <p class="text-center">
+                    <a href="https://kayafirat.com"> Fırat Kaya All Right Reserved &copy; 2020 www.kayafirat.com </a></p>
+                <hr class="bg-white">
+
+            </div>
+        </div>
+    </div>
+    <script src="/js/jquery-3.4.1.min.js "></script>
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+</body>
+
+</html>
